@@ -18,13 +18,15 @@ def ingest_file(filename: str):
     # for packet in packets:
 
     for flow in packets:
-        if db.query(exists().where(models.ItemModel.ipaddr == flow["src_ip"])).scalar() > 0:
+        if db.query(exists().where(models.DeviceModel.ipaddr == flow["src_ip"])).scalar() > 0:
             #Update device
             print("found")
         
         else:
             #Totally new device
             print("not found")
+            db_item = models.ItemModel()
+            
     
 
     db.close()
