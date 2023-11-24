@@ -1,5 +1,6 @@
 from sqlalchemy import Boolean, Column, Integer, String, DateTime, func
 from db import Base
+import json
 
 class DeviceModel(Base):
     __tablename__ = "devices"
@@ -13,8 +14,9 @@ class DeviceModel(Base):
     knowndests = Column(String, index=True)
     knownprotos = Column(String, index=True)
     flowrisks = Column(String, index=True)
-
-    flowscore = Column(Integer, index=True)
+    flowcount = Column(Integer, index=True)
+    flowriskcount = Column(Integer, index=True)
+    totalriskscore = Column(Integer, index=True)
 
     dateAdded = Column(DateTime, nullable=False, default=func.now())
     lastused = Column(DateTime, nullable=False, 
@@ -24,28 +26,47 @@ class DeviceModel(Base):
         self.ipaddr = ipaddr
         self.macaddr = macaddr
         self.devicetype = devicetype
+        self.knowndests = "{}"
+        self.knownprotos = "{}"
+        self.flowrisks = "{}"
+        self.totalriskscore = 0
+        self.flowcount = 0
+        self.flowriskcount = 0
+
     
     @property
     def dests(self):
-        return [str(x) for x in self._ratings.split(';')]
+        return json.loads(self.knowndests)
     
     @dests.setter
     def dests(self, value):
-        self._ratings += ';%s' % value
+        temp = json.loads(self.knowndests)
+        temp[value] = temp.get(value, 0) + 1
+        self.knowndests = json.dumps(temp)
 
     @property
     def protos(self):
-        return [str(x) for x in self._ratings.split(';')]
+        return json.loads(self.knownprotos)
+
+
     @protos.setter
     def protos(self, value):
-        self._ratings += ';%s' % value
+        temp = json.loads(self.knownprotos)
+        temp[value] = temp.get(value, 0) + 1
+        self.knownprotos = json.dumps(temp)
+        self.flowcount += 1
+
     
     @property
     def risks(self):
-        return [int(x) for x in self._ratings.split(';')]
+        return json.loads(self.flowrisks)
+
     @risks.setter
     def risks(self, value):
-        self._ratings += ';%s' % value
+        temp = json.loads(self.flowrisks)
+        temp[value] = temp.get(value, 0) + 1
+        self.flowrisks = json.dumps(temp)
+        self.flowriskcount += 1
 
     
     
