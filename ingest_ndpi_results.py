@@ -19,15 +19,22 @@ def ingest_file(filename: str):
             #Update device
             db_item = db.query(models.DeviceModel).filter(models.DeviceModel.ipaddr == flow["src_ip"]).first()
             parse_flow(flow, db_item)
+
+            #TODO:ANOMOLY DETECTION
+
             db.add(db_item)
             db.commit()
             db.refresh(db_item)
         
         else:
             #Totally new device
-            # print("not found")
+            #TODO:IDENTIFY DEVICE and MAC
+            #TODO:NMAP SCAN with CVES
             db_item = models.DeviceModel(flow["src_ip"], "testing", "testing")
             parse_flow(flow, db_item)
+
+            #TODO:ANOMOLY DETECTION
+
             db.add(db_item)
             db.commit()
             db.refresh(db_item)
