@@ -1,0 +1,181 @@
+.main-menu-BC8 {
+    align-items: center;
+    background-color: #fbf9fd;
+    box-sizing: border-box;
+    display: flex;
+    overflow: hidden;
+    padding-right: 8.3rem;
+    position: relative;
+    width: 100%;
+  
+    .auto-group-aqhv-A44 {
+      align-items: flex-start;
+      background-color: #500a88;
+      border: solid 0.1rem #000000;
+      box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+      box-sizing: border-box;
+      display: flex;
+      flex-shrink: 0;
+      height: 108rem;
+      margin-right: 4.2rem;
+      padding: 3.1rem 1.75rem 3.1rem 1.9rem;
+  
+      .ellipse-2-CHa {
+        background-image: url('/api/prod-us-east-2-first-cluster/projects/C5CBV9M97YdwMUJwAZNx2d/files/image/7857873446293e286ce70f38563b3f80e9eeb1d8');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border-radius: 2.8rem;
+        flex-shrink: 0;
+        height: 5.6rem;
+        margin-right: 1.45rem;
+        width: 5.6rem;
+      }
+      .future-sight-GHS {
+        color: #ffffff;
+        flex-shrink: 0;
+        font-family: Lao Muang Don, 'Source Sans Pro';
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: 1.2575;
+        margin-top: 1.2rem;
+        text-align: center;
+        white-space: nowrap;
+      }
+    }
+    .auto-group-ekqt-eon {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      margin-bottom: 0.2rem;
+      width: 156.8rem;
+  
+      .auto-group-bshi-aBe {
+        align-items: flex-end;
+        display: flex;
+        flex-shrink: 0;
+        margin: 0rem 0rem 4.4rem 0rem;
+  
+        .devices-ty2 {
+          color: #000000;
+          flex-shrink: 0;
+          font-family: Lao Muang Don, 'Source Sans Pro';
+          font-size: 4.5rem;
+          font-weight: 400;
+          line-height: 1.2575;
+          margin: 0rem 74.35rem 6.7rem 0rem;
+          text-align: center;
+          white-space: nowrap;
+        }
+        .button-BSL {
+          align-items: center;
+          background-color: rgba(219, 219, 219, 0.5);
+          border-radius: 2rem;
+          color: #000000;
+          cursor: pointer;
+          display: flex;
+          flex-shrink: 0;
+          font-family: Inter, 'Source Sans Pro';
+          font-size: 2.4rem;
+          font-weight: 400;
+          height: 8rem;
+          justify-content: center;
+          line-height: 1.2125;
+          margin: 0rem 6.4rem 0.1rem 0rem;
+          overflow: hidden;
+          position: relative;
+          text-align: center;
+          white-space: nowrap;
+          width: 30.4rem;
+        }
+        .button-Ap4 {
+          align-items: center;
+          background-color: rgba(219, 219, 219, 0.5);
+          border-radius: 2rem;
+          color: #000000;
+          cursor: pointer;
+          display: flex;
+          flex-shrink: 0;
+          font-family: Inter, 'Source Sans Pro';
+          font-size: 2.4rem;
+          font-weight: 400;
+          height: 8rem;
+          justify-content: center;
+          line-height: 1.2125;
+          overflow: hidden;
+          position: relative;
+          text-align: center;
+          white-space: nowrap;
+          width: 30.4rem;
+        }
+      }
+      .auto-group-mjgp-ptc {
+        flex-shrink: 0;
+        height: 84rem;
+        position: relative;
+        width: 100%;
+  
+        .rectangle-2-MtY {
+          background-color: #ffffff;
+          border-radius: 3.5rem;
+          height: 84rem;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 156.8rem;
+        }
+        .divider-5Jk {
+          height: 0.1rem;
+          left: 0;
+          object-fit: contain;
+          position: absolute;
+          top: 18.3rem;
+          vertical-align: top;
+          width: 156.8rem;
+        }
+        .all-devices-bH6 {
+          color: #000000;
+          font-family: Inter, 'Source Sans Pro';
+          font-size: 3.2rem;
+          font-weight: 400;
+          height: 3.9rem;
+          left: 5.25rem;
+          line-height: 1.2125;
+          position: absolute;
+          text-align: center;
+          top: 3rem;
+          white-space: nowrap;
+          width: 16.6rem;
+        }
+        .device-name-5TA {
+          color: #8c8989;
+          font-family: Inter, 'Source Sans Pro';
+          font-size: 2.4rem;
+          font-weight: 400;
+          height: 3rem;
+          left: 6rem;
+          line-height: 1.2125;
+          position: absolute;
+          text-align: center;
+          top: 14.7rem;
+          white-space: nowrap;
+          width: 15.1rem;
+        }
+        .device-type-aPv {
+          color: #8c8989;
+          font-family: Inter, 'Source Sans Pro';
+          font-size: 2.4rem;
+          font-weight: 400;
+          height: 3rem;
+          left: 62rem;
+          line-height: 1.2125;
+          position: absolute;
+          text-align: center;
+          top: 14.6rem;
+          white-space: nowrap;
+          width: 14rem;
+        }
+      }
+    }
+  }
