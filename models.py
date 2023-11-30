@@ -17,6 +17,7 @@ class DeviceModel(Base):
     flowcount = Column(Integer, index=True)
     flowriskcount = Column(Integer, index=True)
     totalriskscore = Column(Integer, index=True)
+    cves = Column(String, index=True)
 
     dateAdded = Column(DateTime, nullable=False, default=func.now())
     lastused = Column(DateTime, nullable=False, 
@@ -32,6 +33,7 @@ class DeviceModel(Base):
         self.totalriskscore = 0
         self.flowcount = 0
         self.flowriskcount = 0
+        self.cves = "{}"
 
     
     @property
@@ -67,6 +69,14 @@ class DeviceModel(Base):
         temp[value] = temp.get(value, 0) + 1
         self.flowrisks = json.dumps(temp)
         self.flowriskcount += 1
+    
+    @property
+    def cves(self):
+        return [str(x) for x in self.cves.split(';')]
+    
+    @cves.setter
+    def cves(self, value):
+        self._ratings += ';%s' % value
 
     
     
