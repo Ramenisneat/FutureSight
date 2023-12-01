@@ -31,7 +31,7 @@ def ingest_file(filename: str):
         
         else:
             #Totally new device
-            #TODO:IDENTIFY DEVICE and MAC
+            #TODO:IDENTIFY DEVICE 
 
             # mac_addr = get_mac_address(ip=flow["src_ip"])
             # oui_lookup = OUI_lookup(mac_addr)
