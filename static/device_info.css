@@ -20,7 +20,7 @@
     font-size: 4rem;
     font-weight: 400;
 
-    margin-top: 4px;
+    margin-top: 5px;
     text-align: center;
     white-space: nowrap;
   }
@@ -246,7 +246,7 @@
         }
 
         .risks{
-          color: #8c8989;
+          /* color: #8c8989;
           flex-shrink: 0;
           font-family: Inter, 'Source Sans Pro';
           font-size: 2.4rem;
@@ -255,9 +255,23 @@
           margin-bottom: 1rem;
           
           /* text-align: center; */
-          white-space: nowrap;
+          /* white-space: nowrap;
           width: 100%;
-          /* left: 5rem; */
+          left: 5rem; */
+
+          color: #8c8989;
+          font-family: Inter, 'Source Sans Pro';
+          flex-shrink: 0;
+          font-size: 2.4rem;
+          font-weight: 400;
+          height: 13rem;
+          left: 1.2rem; 
+          line-height: .2;
+          position: relative;
+          /* text-align: center; */
+          top: 10.9rem;
+          white-space: nowrap;
+          width: 14rem;
 
         }
         .divider-rkc {
@@ -297,6 +311,7 @@
           border-radius: 16.85rem;
           height: 33.7rem;
           width: 100%;
+          position: relative;
 
           .score{
           color: #000000;
@@ -309,8 +324,10 @@
           white-space: nowrap;
           width: 100%;
           position: absolute;
-          left: 53rem;
-          top: 56rem;
+          /* left: 53rem;*/
+          top: 4rem;
+
+          
   
           }
         }

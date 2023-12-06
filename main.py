@@ -35,7 +35,7 @@ def root(id:str, request: Request, db: Session = Depends(get_db)):
     name = device.OUIlookup if device.OUIlookup != None else "default",
     ip_addr = device.ipaddr,
     mac_addr = device.macaddr,
-    score = str(round(device.totalriskscore / device.flowriskcount)),
+    score = str(round(device.totalriskscore / max(device.flowriskcount, 1))),
     device_type = device.devicetype,
     risks = list(device.risks)
     )
