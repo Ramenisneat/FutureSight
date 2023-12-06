@@ -47,6 +47,8 @@
     text-align: center;
     white-space: nowrap;
     width: 100%;
+    margin-top: -2%;
+
   }
   .auto-group-kcds-5e4 {
     align-items: flex-start;
@@ -264,8 +266,8 @@
           flex-shrink: 0;
           font-size: 2.4rem;
           font-weight: 400;
-          height: 13rem;
-          left: 1.2rem; 
+          height: 5rem;
+          left: 10%; 
           line-height: .2;
           position: relative;
           /* text-align: center; */
