@@ -1,3 +1,31 @@
+.auto-group-aqhv-eiQ {
+  align-items: flex-start;
+  display: flex;
+  flex-shrink: 0;
+
+  .ellipse-2-iEQ {
+    background-image: url(image.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 2.8rem;
+    flex-shrink: 0;
+    height: 5.6rem;
+    margin-right: 1.45rem;
+    width: 5.6rem;
+  }
+  .future-sight-9Ki {
+    color: #000000;
+    flex-shrink: 0;
+    font-family: Inter, 'Source Sans Pro';
+    font-size: 4rem;
+    font-weight: 400;
+
+    margin-top: 4px;
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
 .device-information-UVr {
   background-color: #fbf9fd;
   box-sizing: border-box;
@@ -11,7 +39,7 @@
   .device-info-Drk {
     color: #000000;
     flex-shrink: 0;
-    font-family: Lao Muang Don, 'Source Sans Pro';
+    font-family: Inter, 'Source Sans Pro';
     font-size: 4.5rem;
     font-weight: 400;
     line-height: 1.2575;
@@ -94,6 +122,20 @@
           white-space: nowrap;
           width: 15.1rem;
         }
+        .device-name {
+          color: #8c8989;
+          font-family: Inter, 'Source Sans Pro';
+          font-size: 2.4rem;
+          font-weight: 400;
+          height: 3rem;
+          left: 20rem;
+          line-height: 1.2125;
+          position: absolute;
+          text-align: center;
+          top: 4.8rem;
+          white-space: nowrap;
+          width: 15.1rem;
+        }
         .mac-address-PKJ {
           color: #8c8989;
           font-family: Inter, 'Source Sans Pro';
@@ -101,6 +143,20 @@
           font-weight: 400;
           height: 3rem;
           left: 1.5rem;
+          line-height: 1.2125;
+          position: absolute;
+          text-align: center;
+          top: 17.8rem;
+          white-space: nowrap;
+          width: 14.9rem;
+        }
+        .mac-address{
+          color: #8c8989;
+          font-family: Inter, 'Source Sans Pro';
+          font-size: 2.4rem;
+          font-weight: 400;
+          height: 3rem;
+          left: 20rem;
           line-height: 1.2125;
           position: absolute;
           text-align: center;
@@ -122,6 +178,20 @@
           white-space: nowrap;
           width: 12.2rem;
         }
+        .IP-addr {
+          color: #8c8989;
+          font-family: Inter, 'Source Sans Pro';
+          font-size: 2.4rem;
+          font-weight: 400;
+          height: 3rem;
+          left: 21.5rem;
+          line-height: 1.2125;
+          position: absolute;
+          text-align: center;
+          top: 25rem;
+          white-space: nowrap;
+          width: 12.2rem;
+        }
         .device-type-nsE {
           color: #8c8989;
           font-family: Inter, 'Source Sans Pro';
@@ -129,6 +199,20 @@
           font-weight: 400;
           height: 3rem;
           left: 1.4rem;
+          line-height: 1.2125;
+          position: absolute;
+          text-align: center;
+          top: 10.9rem;
+          white-space: nowrap;
+          width: 14rem;
+        }
+        .device-type {
+          color: #8c8989;
+          font-family: Inter, 'Source Sans Pro';
+          font-size: 2.4rem;
+          font-weight: 400;
+          height: 3rem;
+          left: 20.5rem;
           line-height: 1.2125;
           position: absolute;
           text-align: center;
@@ -152,12 +236,29 @@
           flex-shrink: 0;
           font-family: Inter, 'Source Sans Pro';
           font-size: 2.4rem;
-          font-weight: 400;
-          line-height: 1.2125;
+          font-weight: 600;
+          /* line-height: 1.25; */
           margin-bottom: 1rem;
+          margin-top: -5px;
           text-align: center;
           white-space: nowrap;
           width: 100%;
+        }
+
+        .risks{
+          color: #8c8989;
+          flex-shrink: 0;
+          font-family: Inter, 'Source Sans Pro';
+          font-size: 2.4rem;
+          font-weight: 400;
+          line-height: 2;
+          margin-bottom: 1rem;
+          
+          /* text-align: center; */
+          white-space: nowrap;
+          width: 100%;
+          /* left: 5rem; */
+
         }
         .divider-rkc {
           flex-shrink: 0;
@@ -174,7 +275,7 @@
 
       .device-info-7wS {
         color: #000000;
-        font-family: Lao Muang Don, 'Source Sans Pro';
+        font-family: Inter, 'Source Sans Pro';
         font-size: 4.5rem;
         font-weight: 400;
         line-height: 1.2575;
@@ -196,7 +297,24 @@
           border-radius: 16.85rem;
           height: 33.7rem;
           width: 100%;
+
+          .score{
+          color: #000000;
+          font-family: Inter, 'Source Sans Pro';
+          font-size: 8rem;
+          font-weight: 400;
+          line-height: 1.2575;
+          /* margin-bottom: 4rem; */
+          text-align: center;
+          white-space: nowrap;
+          width: 100%;
+          position: absolute;
+          left: 53rem;
+          top: 56rem;
+  
+          }
         }
+
       }
     }
   }

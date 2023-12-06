@@ -4,6 +4,8 @@ from fastapi.templating import Jinja2Templates
 from db import engine, get_db, Base
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
+from models import DeviceModel
+from schemas import deviceTemp
 
 
 
@@ -16,8 +18,30 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 #On whatever URL this app is hosted on, for example 127.0.0.1
 #127.0.0.1/ will return with this JSON message 
 @app.get("/")
-def root(request: Request):
-    return templates.TemplateResponse("main_menu.html", {"request": request})
+def root(request: Request, db: Session = Depends(get_db)):
+    devices = db.query(DeviceModel).offset(0).limit(100).all()
+    result=[]
+    for i in devices:
+        result.append({"name": i.ipaddr, "type": i.devicetype, "id": i.id})
+    print(result)
+    return templates.TemplateResponse("main_menu.html", {"request": request, "devices" : result})
+
+
+
+@app.get("/view/{id}")
+def root(id:str, request: Request, db: Session = Depends(get_db)):
+    device = db.query(DeviceModel).filter(DeviceModel.id == id).first()
+    result = deviceTemp(
+    name = device.OUIlookup if device.OUIlookup != None else "default",
+    ip_addr = device.ipaddr,
+    mac_addr = device.macaddr,
+    score = str(round(device.totalriskscore / device.flowriskcount)),
+    device_type = device.devicetype,
+    risks = list(device.risks)
+    )
+    return templates.TemplateResponse("Device_Info.html", {"request": request, "device": dict(result)})
+
+
 
 #CRUD stuff
 Base.metadata.create_all(bind=engine)

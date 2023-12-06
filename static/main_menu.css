@@ -1,3 +1,7 @@
+.body {
+  font-family: Inter, 'Source Sans Pro';
+}
+
 .main-menu-A92 {
   align-items: center;
   background-color: #fbf9fd;
@@ -12,7 +16,7 @@
     align-items: flex-start;
     background-color: #500a88;
     border: solid 0.1rem #000000;
-    box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0);
     box-sizing: border-box;
     display: flex;
     flex-shrink: 0;
@@ -21,7 +25,7 @@
     padding: 3.1rem 1.75rem 3.1rem 1.9rem;
 
     .ellipse-2-iEQ {
-      background-image: url('https://inventorsprog-qtt8373.slack.com/files/U05NV2W1KMF/F067WGUGJET/image.png');
+      background-image: url(image.png);
       background-position: center;
       background-repeat: no-repeat;
       background-size: 100% 100%;
@@ -34,11 +38,11 @@
     .future-sight-9Ki {
       color: #ffffff;
       flex-shrink: 0;
-      font-family: Lao Muang Don, 'Source Sans Pro';
-      font-size: 2.4rem;
+      /* font-family: Lao Muang Don, 'Source Sans Pro'; */
+      font-size: 4rem;
       font-weight: 400;
       line-height: 1.2575;
-      margin-top: 1.2rem;
+      /* margin-top: 1rem; */
       text-align: center;
       white-space: nowrap;
     }
@@ -60,7 +64,7 @@
       .devices-jSL {
         color: #000000;
         flex-shrink: 0;
-        font-family: Lao Muang Don, 'Source Sans Pro';
+        /* font-family: Lao Muang Don, 'Source Sans Pro'; */
         font-size: 4.5rem;
         font-weight: 400;
         line-height: 1.2575;
@@ -76,7 +80,7 @@
         cursor: pointer;
         display: flex;
         flex-shrink: 0;
-        font-family: Inter, 'Source Sans Pro';
+        /* font-family: Inter, 'Source Sans Pro'; */
         font-size: 2.4rem;
         font-weight: 400;
         height: 8rem;
@@ -97,7 +101,7 @@
         cursor: pointer;
         display: flex;
         flex-shrink: 0;
-        font-family: Inter, 'Source Sans Pro';
+        /* font-family: Inter, 'Source Sans Pro'; */
         font-size: 2.4rem;
         font-weight: 400;
         height: 8rem;
@@ -136,7 +140,7 @@
       }
       .all-devices-eUk {
         color: #000000;
-        font-family: Inter, 'Source Sans Pro';
+        /* font-family: Inter, 'Source Sans Pro'; */
         font-size: 3.2rem;
         font-weight: 400;
         height: 3.9rem;
@@ -149,9 +153,9 @@
         width: 16.6rem;
       }
       .device-name-HGp {
-        color: #8c8989;
-        font-family: Inter, 'Source Sans Pro';
-        font-size: 2.4rem;
+        color: #707070;
+        /* font-family: Inter, 'Source Sans Pro'; */
+        font-size: 2.8rem;
         font-weight: 400;
         height: 3rem;
         left: 6rem;
@@ -163,9 +167,9 @@
         width: 15.1rem;
       }
       .device-type-Pqe {
-        color: #8c8989;
-        font-family: Inter, 'Source Sans Pro';
-        font-size: 2.4rem;
+        color: #707070;
+        /* font-family: Inter, 'Source Sans Pro'; */
+        font-size: 2.8rem;
         font-weight: 400;
         height: 3rem;
         left: 62rem;
@@ -175,6 +179,44 @@
         top: 14.6rem;
         white-space: nowrap;
         width: 14rem;
+      }
+
+      .rows1 {
+        color: #8c8989;
+        font-size: 2.4rem;
+        font-weight: 400;
+        height: 3rem;
+        position: relative;
+        line-height: 1.2125;
+        white-space: nowrap;
+        width: 14rem;
+        top: 20.6rem;
+        left: 6rem
+
+      }
+      .rows2 {
+        color: #8c8989;
+        font-size: 2.4rem;
+        font-weight: 400;
+        height: 3.15rem;
+        position: relative;
+        line-height: 1.2125;
+        white-space: nowrap;
+        top: 20.6rem;
+        left: 48rem;
+
+      }
+      .rows3 {
+        color: #8c8989;
+        font-size: 2.8rem;
+        font-weight: 400;
+        height: 3.15rem;
+        position: relative;
+        line-height: 1.2125;
+        white-space: nowrap;
+        top: 20.6rem;
+        left: 70rem;
+
       }
     }
   }

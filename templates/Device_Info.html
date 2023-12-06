@@ -1,27 +1,68 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <title>FutureSight</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="{{ url_for('static', path='/device_info.css') }}" rel="stylesheet">
+  
+    </head>
+    
+
+<body>
 <div class="device-information-UVr" id="52:300">
+    <div class="auto-group-aqhv-eiQ" id="CWHRLrLQnYsLCv5xFEAqHv">
+        <a href="/">
+        <div class="ellipse-2-iEQ" id="52:218"></div>
+        </a>
+        <p class="future-sight-9Ki" id="52:219">Future Sight</p>
+        </div>
     <p class="device-info-Drk" id="52:302">Device Information</p>
     <div class="auto-group-kcds-5e4" id="CWHSfp8AzZL6SPXRFzKcdS">
     <div class="auto-group-qs6g-bsJ" id="CWHSxtU4AdT352JoWXqS6g">
     <div class="auto-group-stuu-hQY" id="CWHTCYjxhtLzNjLJumStUU">
-    <img class="divider-BqW" src="/api/prod-us-east-2-first-cluster/projects/C5CBV9M..." id="52:304"/>
+    <!-- <img class="divider-BqW" src="/api/prod-us-east-2-first-cluster/projects/C5CBV9M..." id="52:304"/>
     <img class="divider-umW" src="/api/prod-us-east-2-first-cluster/projects/C5CBV9M..." id="57:359"/>
     <img class="divider-rAx" src="/api/prod-us-east-2-first-cluster/projects/C5CBV9M..." id="57:360"/>
-    <img class="divider-ymN" src="/api/prod-us-east-2-first-cluster/projects/C5CBV9M..." id="57:361"/>
+    <img class="divider-ymN" src="/api/prod-us-east-2-first-cluster/projects/C5CBV9M..." id="57:361"/> -->
     <p class="device-name-XH6" id="52:306">Device Name</p>
+    <p class="device-name" id="test1"> {{device.name}}</p>
     <p class="mac-address-PKJ" id="52:312">Mac Address</p>
+    <p class="mac-address"> {{device.mac_addr}}</p>
     <p class="ip-address-h56" id="52:313">IP Address</p>
+    <p class="IP-addr"> {{device.ip_addr}}</p>
     <p class="device-type-nsE" id="52:307">Device Type</p>
+    <p class="device-type"> {{device.device_type}}</p>
+
     </div>
     <div class="auto-group-4moa-pJ8" id="CWHTPNmFbYKjWQDivW4moA">
     <p class="risks-YV2" id="52:315">Risks</p>
-    <img class="divider-rkc" src="/api/prod-us-east-2-first-cluster/projects/C5CBV9M..." id="52:314"/>
+    <!-- <img class="divider-rkc" src="/api/prod-us-east-2-first-cluster/projects/C5CBV9M..." id="52:314"/> -->
+    <div style="overflow-x:auto;">
+    <table>
+        <tbody>
+            {% for risk in device.risks %}
+                    <tr>
+                        <td class="risks">{{risk}}</td>
+                    </tr>
+                {% endfor %}    
+        </tbody>
+        
+    </table>
+    </div>
     </div>
     </div>
     <div class="auto-group-2d4g-B2C" id="CWHTdY2KqYunNavBs12d4g">
     <p class="device-info-7wS" id="52:317">Risk Score</p>
     <div class="auto-group-qbm6-r8L" id="CWHThcjrk34ESpEg6fQBM6">
-    <div class="ellipse-4-APv" id="52:318"></div>
+    <div class="ellipse-4-APv" id="52:318">
+    <p class="score">{{device.score}}</p>
+    </div>
+
     </div>
     </div>
     </div>
     </div>
+</body>

@@ -3,12 +3,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FutureSight</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ url_for('static', path='/main_menu.css') }}" rel="stylesheet">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link href="{{ url_for('static', path='/main_menu.css') }}" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet"> -->
+        
 </head>
 
+<body>
 <div class="main-menu-A92" id="59:392">
     <div class="auto-group-aqhv-eiQ" id="CWHRLrLQnYsLCv5xFEAqHv">
     <div class="ellipse-2-iEQ" id="52:218"></div>
@@ -24,8 +27,27 @@
     <div class="rectangle-2-nBe" id="52:213"></div>
     <img class="divider-un4" src="https://inventorsprog-qtt8373.slack.com/files/U05NV2W1KMF/F067WGUGJET/image.png" id="52:214"/>
     <p class="all-devices-eUk" id="52:215">All Devices</p>
-    <p class="device-name-HGp" id="52:216">Device Name</p>
-    <p class="device-type-Pqe" id="52:217">Device Type</p>
+    <table>
+        <thead>
+            <tr>
+                <th class="device-name-HGp" id="52:216">Device Name</th>
+                <th class="device-type-Pqe" id="52:217">Device type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for device in devices %}
+                    <tr>
+                        <td class="rows1">{{ device.name}}</td>
+                        <td class="rows2">{{ device.type }}</td>
+                        <td class="rows3">
+                            <a href="view/{{ device.id }}" class="btn  btn-success display-1">View</a>
+                        </td>
+                    </tr>
+                {% endfor %}    
+        </tbody>
+
+    </table>
     </div>
     </div>
     </div>
+</body>
