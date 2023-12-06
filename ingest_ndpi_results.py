@@ -6,6 +6,7 @@ from db import SessionLocal, engine
 import nmap
 from getmac import get_mac_address
 import requests
+import sys
 
 models.Base.metadata.create_all(bind=engine)
 
