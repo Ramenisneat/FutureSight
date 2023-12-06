@@ -1,3 +1,19 @@
+@property --progress-value {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@keyframes progress {
+ to { --progress-value: 100; }
+}
+
+
+@-moz-keyframes progress {
+  to { --progress-value: 100; }
+ }
+
+
 .auto-group-aqhv-eiQ {
   align-items: flex-start;
   display: flex;
@@ -35,6 +51,7 @@
   padding: 5.2rem 6.1rem 4.9rem 6.1rem;
   position: relative;
   width: 100%;
+  height: 100vh;
 
   .device-info-Drk {
     color: #000000;
@@ -227,7 +244,7 @@
         background-color: #ffffff;
         border-radius: 3.5rem;
         box-sizing: border-box;
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
         flex-shrink: 0;
         padding: 4.2rem 0rem 36.5rem 0rem;
@@ -300,13 +317,20 @@
         white-space: nowrap;
         width: 100%;
       }
+
+
+
       .auto-group-qbm6-r8L {
-        background-color: #500a88;
+        /* background-color: #500a88; */
         border-radius: 22.9rem;
         box-sizing: border-box;
         margin-left: 3.65rem;
         padding: 6rem 6.1rem 6.1rem 6rem;
         width: 45.8rem;
+        background: 
+          radial-gradient(closest-side, #fcfafd 79%, transparent 70% 100%),
+          conic-gradient(#500a88 calc(var(--progress-value) * 1%), #fcfafd 0);   
+        animation: progress 2s 1 forwards;
 
         .ellipse-4-APv {
           background-color: #fcfafd;
@@ -329,8 +353,6 @@
           /* left: 53rem;*/
           top: 4rem;
 
-          
-  
           }
         }
 
