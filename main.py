@@ -31,13 +31,18 @@ def root(request: Request, db: Session = Depends(get_db)):
 @app.get("/view/{id}")
 def root(id:str, request: Request, db: Session = Depends(get_db)):
     device = db.query(DeviceModel).filter(DeviceModel.id == id).first()
+    risks = device.cves + list(device.risks)
+
+    risks.remove("")
+    # print(risks)
+
     result = deviceTemp(
     name = device.OUIlookup if device.OUIlookup != None else "default",
     ip_addr = device.ipaddr,
     mac_addr = device.macaddr,
     score = str(round(device.totalriskscore / max(device.flowriskcount, 1))),
     device_type = device.devicetype,
-    risks = list(device.risks)
+    risks = risks
     )
     return templates.TemplateResponse("Device_Info.html", {"request": request, "device": dict(result)})
 

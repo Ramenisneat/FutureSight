@@ -1,17 +1,22 @@
-@property --progress-value {
+/* @property --progress-value {
   syntax: "<integer>";
   initial-value: 0;
   inherits: false;
+} */
+
+
+:root {
+  --bg-color-start: 0;
+  --bg-color-end: 100;
 }
 
 @keyframes progress {
- to { --progress-value: 100; }
+  to {
+      background: 
+        radial-gradient(closest-side, #fcfafd 79%, transparent 70% 100%),
+        conic-gradient(#500a88 calc(var(--bg-color-end) * 1%), #fcfafd 0);  
+  }
 }
-
-
-@-moz-keyframes progress {
-  to { --progress-value: 100; }
- }
 
 
 .auto-group-aqhv-eiQ {
@@ -329,8 +334,8 @@
         width: 45.8rem;
         background: 
           radial-gradient(closest-side, #fcfafd 79%, transparent 70% 100%),
-          conic-gradient(#500a88 calc(var(--progress-value) * 1%), #fcfafd 0);   
-        animation: progress 2s 1 forwards;
+          conic-gradient(#500a88 calc(var(--bg-color-end) * 1%), #fcfafd 0);  
+        /* animation: 2s progress forwards;  */
 
         .ellipse-4-APv {
           background-color: #fcfafd;
