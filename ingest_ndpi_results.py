@@ -62,22 +62,23 @@ def ingest_file(filename: str):
             #TODO:IDENTIFY DEVICE 
 
             print(flow["src_ip"])
-            try:
-                mac_addr = arpreq.arpreq(flow["src_ip"])
-                oui_lookup = OUI_lookup(mac_addr)
-            except:
-                print("error searching mac addr")
+
+            # try:
+            #     mac_addr = arpreq.arpreq(flow["src_ip"])
+            #     oui_lookup = OUI_lookup(mac_addr)
+            # except:
+            #     print("error searching mac addr")
                 
             # print(mac_addr)
             # print(oui_lookup)
 
-            # mac_addr = "default"
-            # oui_lookup = "default"
+            mac_addr = "default"
+            oui_lookup = "default"
 
             #TODO: OFFLOAD NMAP SCAN TO CHILD PROCESS
             
-            cves = nmap_scan(flow["src_ip"])
-
+            # cves = nmap_scan(flow["src_ip"])
+            cves = []
             db_item = models.DeviceModel(flow["src_ip"], mac_addr, oui_lookup)
             parse_flow(flow, db_item)
 
@@ -132,4 +133,4 @@ def parse_flow(flow, db_item):
             db_item.totalriskscore += int(risk["risk_score"]["total"])
 
 if __name__ == "__main__":
-    ingest_file("test.json")
+    ingest_file("example.json")
