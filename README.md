@@ -1,6 +1,6 @@
 # FutureSight
 
-Solution to parse network traffic, monitor and detect vulnerabilites on home network devices
+Solution to parse network traffic, monitor and detect vulnerabilites on home network IOT devices
 
 
 # Usage
